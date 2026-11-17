@@ -1,4 +1,3 @@
-# Data Science Academy
 # Administração de Sistema Operacional Linux com Docker e Kubernetes
 # Lab 8 - Deploy e Orquestração de Aplicação de IA com Docker e Kubernetes
 

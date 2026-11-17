@@ -44,4 +44,4 @@ accuracy = accuracy_score(y_test, predictions)
 print(f"Acurácia: {accuracy:.2f}")
 
 # Salvar o modelo ajustado
-joblib.dump(model, "modelo_dsa.pkl")
+joblib.dump(model, "modelo.pkl")

@@ -6,7 +6,7 @@ import joblib
 import numpy as np
 
 # Carregar o modelo
-modelo_dsa = joblib.load("modelo_dsa.pkl")
+modelo = joblib.load("modelo.pkl")
 
 # Configuração da página do Streamlit
 st.set_page_config(page_title="Equipment classification on Kubernetes", page_icon=":100:", layout="wide")
@@ -49,8 +49,8 @@ with col2:
 if st.button("Prever"):
 
     input_array = np.array([[temperatura, pressao, horas_operacao, vibracao, ruido]])
-    prediction = modelo_dsa.predict(input_array)
-    prediction_proba = modelo_dsa.predict_proba(input_array)[0]
+    prediction = modelo.predict(input_array)
+    prediction_proba = modelo.predict_proba(input_array)[0]
 
     if prediction[0] == 1:
         st.warning("⚠️ **Manutenção Necessária!**")
